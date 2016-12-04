@@ -9,7 +9,7 @@ export default class Home extends Component {
     return (
       <nav>
         <ul>
-          <li>Create Deck</li>
+          <li><Link to="/create">Create Deck</Link></li>
           <li><Link to="/study">Study</Link></li>
         </ul>
       </nav>

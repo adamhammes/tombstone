@@ -1,0 +1,12 @@
+.deckCreator ul {
+  padding: 0;
+}
+
+.deckCreator ul li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+.deckCreator input:first-child {
+  margin-right: 5px;
+}
