@@ -2,10 +2,12 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
+const makeUrl = (deck) => `/decks/${deck.id}`;
+
 export default class DeckList extends React.Component {
   render() {
     const items = this.props.decks.map((deck) => (
-      <li key={deck.id}>{deck.name}</li>
+      <Link to={makeUrl(deck)} key={deck.id}><li>{deck.name}</li></Link>
     ));
 
     return (

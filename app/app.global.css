@@ -10,3 +10,16 @@
 .deckCreator input:first-child {
   margin-right: 5px;
 }
+
+.deck li {
+  padding-left: 5px;
+}
+
+.tableContainer {
+  display: inline-table;
+  width: 100%;
+}
+
+.tableContainer div {
+  display: table-cell;
+}
