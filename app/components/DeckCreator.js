@@ -48,7 +48,7 @@ export default class DeckCreator extends React.Component {
     const completedCards = this.state.cards.filter(isComplete);
     this.props.addDeck(this.state.name, completedCards);
 
-    hashHistory.push('/study');
+    hashHistory.push('/decks');
     event.preventDefault();
   }
 
