@@ -3,6 +3,8 @@ import { hashHistory } from 'react-router';
 
 const START_NUM_ROWS = 16;
 
+const isComplete = (card) => card.prompt !== '' && card.prompt !== '';
+
 export default class DeckCreator extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +45,9 @@ export default class DeckCreator extends React.Component {
   }
 
   handleSubmit(event) {
-    this.props.addDeck(this.state.name, this.state.cards);
+    const completedCards = this.state.cards.filter(isComplete);
+    this.props.addDeck(this.state.name, completedCards);
+
     hashHistory.push('/study');
     event.preventDefault();
   }
